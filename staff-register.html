@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as a staff member or vendor with Click1Solutions. Join our network of service providers.">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="manifest" href="manifest.json">
+    <title>Register as Staff/Vendor | Click1Solutions Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C1</div>
+                <span>Click1Solutions</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="staff-register.html" class="nav-link active">Register</a></li>
+                    <li><a href="admin-login.html" class="nav-link">Admin</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="construction.html" class="mobile-nav-link">Construction</a></li>
+            <li class="mobile-nav-item"><a href="food.html" class="mobile-nav-link">Food Services</a></li>
+            <li class="mobile-nav-item"><a href="travel.html" class="mobile-nav-link">Travel</a></li>
+            <li class="mobile-nav-item"><a href="gst.html" class="mobile-nav-link">GST Services</a></li>
+            <li class="mobile-nav-item"><a href="marketing.html" class="mobile-nav-link">Marketing</a></li>
+            <li class="mobile-nav-item"><a href="it.html" class="mobile-nav-link">IT Solutions</a></li>
+            <li class="mobile-nav-item"><a href="staff-register.html" class="mobile-nav-link">Register</a></li>
+            <li class="mobile-nav-item"><a href="admin-login.html" class="mobile-nav-link">Admin</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container form-container">
+            <div class="form-card">
+                <h2>Register as Staff/Vendor</h2>
+                <p>Join our network of service providers and grow your business with us.</p>
+                
+                <form id="staffRegisterForm" novalidate>
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName" class="form-label required">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            required
+                            maxlength="100"
+                        >
+                        <div class="form-error" id="fullNameError"></div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label required">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="your@email.com"
+                            required
+                            maxlength="100"
+                        >
+                        <div class="form-error" id="emailError"></div>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label required">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="form-input" 
+                            placeholder="10-digit mobile number"
+                            required
+                            maxlength="10"
+                            inputmode="numeric"
+                        >
+                        <div class="form-error" id="phoneError"></div>
+                    </div>
+                    
+                    <!-- Service Category -->
+                    <div class="form-group">
+                        <label for="serviceCategory" class="form-label required">Service Category</label>
+                        <select id="serviceCategory" name="serviceCategory" class="form-select" required>
+                            <option value="">Select a category</option>
+                            <option value="construction">Construction</option>
+                            <option value="food">Food Services</option>
+                            <option value="travel">Travel & Tourism</option>
+                            <option value="gst">GST & Tax Services</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="it">IT Solutions</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error" id="serviceCategoryError"></div>
+                    </div>
+                    
+                    <!-- Other Service (hidden by default) -->
+                    <div class="form-group" id="otherServiceGroup" style="display: none;">
+                        <label for="otherService" class="form-label required">Specify Service</label>
+                        <input 
+                            type="text" 
+                            id="otherService" 
+                            name="otherService" 
+                            class="form-input" 
+                            placeholder="Enter your service type"
+                            maxlength="100"
+                        >
+                        <div class="form-error" id="otherServiceError"></div>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="form-group">
+                        <label for="experience" class="form-label required">Years of Experience</label>
+                        <select id="experience" name="experience" class="form-select" required>
+                            <option value="">Select experience</option>
+                            <option value="0-1">Less than 1 year</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10+">More than 10 years</option>
+                        </select>
+                        <div class="form-error" id="experienceError"></div>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="form-group">
+                        <label for="location" class="form-label required">Your Location</label>
+                        <input 
+                            type="text" 
+                            id="location" 
+                            name="location" 
+                            class="form-input" 
+                            placeholder="City, District"
+                            required
+                            maxlength="150"
+                        >
+                        <div class="form-error" id="locationError"></div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label for="description" class="form-label required">About Your Services</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            class="form-textarea" 
+                            placeholder="Briefly describe your services, skills, and expertise..."
+                            required
+                            maxlength="500"
+                        ></textarea>
+                        <div class="form-error" id="descriptionError"></div>
+                        <small style="color: var(--gray); font-size: 0.875rem;">Maximum 500 characters</small>
+                    </div>
+                    
+                    <!-- Terms -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: var(--space-sm); cursor: pointer;">
+                            <input type="checkbox" id="terms" name="terms" required style="margin-top: 4px;">
+                            <span style="font-size: 0.9375rem; color: var(--gray-dark);">
+                                I agree to the terms and conditions. I confirm that all information 
+                                provided is accurate and I consent to verification.
+                            </span>
+                        </label>
+                        <div class="form-error" id="termsError"></div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">
+                        Submit Registration
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal" style="max-width: 500px;">
+            <div class="modal-header">
+                <div class="modal-icon success">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Registration Submitted!</h3>
+                <p>Your application has been received and is pending review. Our admin team will verify your information and contact you soon.</p>
+            </div>
+            <div style="padding: 0 var(--space-xl); margin-bottom: var(--space-lg);">
+                <div style="background: rgba(99, 102, 241, 0.08); border: 2px dashed var(--primary); border-radius: var(--radius-md); padding: var(--space-lg); text-align: center;">
+                    <p style="font-size: 0.875rem; color: var(--gray); margin-bottom: var(--space-sm);">Your Request ID</p>
+                    <p id="requestIdDisplay" style="font-size: 1.5rem; font-weight: 700; color: var(--primary); font-family: monospace; letter-spacing: 1px;"></p>
+                    <p style="font-size: 0.8125rem; color: var(--gray); margin-top: var(--space-sm);">Save this ID to cancel your request later</p>
+                </div>
+            </div>
+            <div class="modal-footer" style="flex-direction: column; gap: var(--space-md);">
+                <button class="btn btn-primary btn-block" onclick="closeModal()">OK, Got it</button>
+                <a href="cancel-request.html" class="btn btn-outline btn-block btn-sm">Need to cancel? Click here</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Submitting your registration...</p>
+    </div>
+    
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Staff Registration Form Handler
+        (function() {
+            const form = document.getElementById('staffRegisterForm');
+            const serviceCategory = document.getElementById('serviceCategory');
+            const otherServiceGroup = document.getElementById('otherServiceGroup');
+            const successModal = document.getElementById('successModal');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            
+            // Show/hide other service field
+            serviceCategory.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherServiceGroup.style.display = 'block';
+                    document.getElementById('otherService').required = true;
+                } else {
+                    otherServiceGroup.style.display = 'none';
+                    document.getElementById('otherService').required = false;
+                }
+            });
+            
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                
+                // Reset errors
+                document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+                document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(el => {
+                    el.classList.remove('error');
+                });
+                
+                // Full Name
+                const fullName = document.getElementById('fullName').value.trim();
+                if (!fullName) {
+                    showError('fullName', 'Full name is required');
+                    isValid = false;
+                } else if (fullName.length < 3) {
+                    showError('fullName', 'Name must be at least 3 characters');
+                    isValid = false;
+                } else if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+                    showError('fullName', 'Name should contain only letters and spaces');
+                    isValid = false;
+                }
+                
+                // Email
+                const email = document.getElementById('email').value.trim();
+                if (!email) {
+                    showError('email', 'Email is required');
+                    isValid = false;
+                } else if (!SecurityModule.isValidEmail(email)) {
+                    showError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Phone
+                const phone = document.getElementById('phone').value.trim();
+                if (!phone) {
+                    showError('phone', 'Phone number is required');
+                    isValid = false;
+                } else if (!SecurityModule.isValidPhone(phone)) {
+                    showError('phone', 'Please enter a valid 10-digit mobile number');
+                    isValid = false;
+                }
+                
+                // Service Category
+                if (!serviceCategory.value) {
+                    showError('serviceCategory', 'Please select a service category');
+                    isValid = false;
+                }
+                
+                // Other Service
+                if (serviceCategory.value === 'other') {
+                    const otherService = document.getElementById('otherService').value.trim();
+                    if (!otherService) {
+                        showError('otherService', 'Please specify your service');
+                        isValid = false;
+                    }
+                }
+                
+                // Experience
+                if (!document.getElementById('experience').value) {
+                    showError('experience', 'Please select your experience');
+                    isValid = false;
+                }
+                
+                // Location
+                const location = document.getElementById('location').value.trim();
+                if (!location) {
+                    showError('location', 'Location is required');
+                    isValid = false;
+                } else if (location.length < 3) {
+                    showError('location', 'Please enter a valid location');
+                    isValid = false;
+                }
+                
+                // Description
+                const description = document.getElementById('description').value.trim();
+                if (!description) {
+                    showError('description', 'Please describe your services');
+                    isValid = false;
+                } else if (description.length < 20) {
+                    showError('description', 'Description should be at least 20 characters');
+                    isValid = false;
+                }
+                
+                // Terms
+                if (!document.getElementById('terms').checked) {
+                    showError('terms', 'You must agree to the terms and conditions');
+                    isValid = false;
+                }
+                
+                return isValid;
+            }
+            
+            function showError(fieldId, message) {
+                const errorEl = document.getElementById(fieldId + 'Error');
+                const inputEl = document.getElementById(fieldId);
+                if (errorEl) {
+                    errorEl.innerHTML = `
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        ${SecurityModule.sanitizeInput(message)}
+                    `;
+                }
+                if (inputEl && inputEl.classList) {
+                    inputEl.classList.add('error');
+                }
+            }
+            
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    return;
+                }
+                
+                // Show loading
+                loadingOverlay.classList.add('active');
+                
+                // Generate request ID
+                const requestId = 'req_' + Date.now();
+                
+                // Collect form data
+                const formData = {
+                    id: requestId,
+                    fullName: SecurityModule.sanitizeInput(document.getElementById('fullName').value.trim()),
+                    email: SecurityModule.sanitizeInput(document.getElementById('email').value.trim()),
+                    phone: SecurityModule.sanitizeInput(document.getElementById('phone').value.trim()),
+                    serviceCategory: serviceCategory.value,
+                    otherService: serviceCategory.value === 'other' 
+                        ? SecurityModule.sanitizeInput(document.getElementById('otherService').value.trim())
+                        : '',
+                    experience: document.getElementById('experience').value,
+                    location: SecurityModule.sanitizeInput(document.getElementById('location').value.trim()),
+                    description: SecurityModule.sanitizeInput(document.getElementById('description').value.trim()),
+                    status: 'pending',
+                    submittedAt: new Date().toISOString()
+                };
+                
+                try {
+                    // Get existing requests
+                    let requests = await SecurityModule.secureRetrieve('staffRequests') || [];
+                    
+                    // Add new request
+                    requests.push(formData);
+                    
+                    // Save encrypted data
+                    await SecurityModule.secureStore('staffRequests', requests);
+                    
+                    // Hide loading
+                    loadingOverlay.classList.remove('active');
+                    
+                    // Display request ID
+                    document.getElementById('requestIdDisplay').textContent = requestId;
+                    
+                    // Show success modal
+                    successModal.classList.add('active');
+                    
+                    // Reset form
+                    form.reset();
+                    otherServiceGroup.style.display = 'none';
+                    
+                } catch (error) {
+                    console.error('Error saving registration:', error);
+                    loadingOverlay.classList.remove('active');
+                    showToast('Error submitting registration. Please try again.', 'error');
+                }
+            });
+            
+            // Close modal function
+            window.closeModal = function() {
+                successModal.classList.remove('active');
+            };
+            
+            // Close modal on overlay click
+            successModal.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

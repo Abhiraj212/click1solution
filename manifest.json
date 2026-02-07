@@ -1,0 +1,69 @@
+{
+  "name": "Click1Solutions Pvt. Ltd.",
+  "short_name": "Click1Solutions",
+  "description": "Your trusted partner for Construction, Food Services, Travel, GST, Marketing, and IT solutions in Hamirpur, Himachal Pradesh.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect fill='%236366f1' width='192' height='192' rx='40'/%3E%3Ctext x='96' y='125' font-size='80' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3EC1%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect fill='%231a5fb4' width='512' height='512' rx='100'/%3E%3Ctext x='256' y='340' font-size='220' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3EC1%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3Crect fill='%23f1f5f9' width='1280' height='720'/%3E%3Crect fill='%236366f1' x='0' y='0' width='1280' height='400'/%3E%3Ctext x='640' y='200' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3EClick1Solutions%3C/text%3E%3Ctext x='640' y='280' font-size='30' text-anchor='middle' fill='white' font-family='Arial, sans-serif'%3EComplete Business Solutions%3C/text%3E%3C/svg%3E",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Homepage of Click1Solutions"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View all our services",
+      "url": "/services.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect fill='%232ec4b6' width='96' height='96' rx='20'/%3E%3Ctext x='48' y='65' font-size='45' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Register",
+      "short_name": "Register",
+      "description": "Register as staff or vendor",
+      "url": "/staff-register.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect fill='%23ff6b35' width='96' height='96' rx='20'/%3E%3Ctext x='48' y='65' font-size='45' text-anchor='middle' fill='white' font-family='Arial'%3ER%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
