@@ -573,3 +573,26 @@ window.SecurityModule = {
     COMPANY_CONTACT,
     SECURITY_CONFIG
 };
+document.getElementById('loginBtn').addEventListener('click', async function() {
+    // ===== ADD DEBUG CODE HERE =====
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    // Generate hashes to compare
+    const usernameHash = await SecurityModule.sha256(username);
+    const passwordHash = await SecurityModule.sha256(password);
+    
+    console.log('Entered username:', username);
+    console.log('Entered password:', password);
+    console.log('Entered username hash:', usernameHash);
+    console.log('Expected username hash:', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+    console.log('Entered password hash:', passwordHash);
+    console.log('Expected password hash:', '7c4a8d09ca3762af61e59520943dc26494f8941b5d5b7a8e3d6c8f9e2a1b4c5d');
+    console.log('Username match:', usernameHash === '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+    console.log('Password match:', passwordHash === '7c4a8d09ca3762af61e59520943dc26494f8941b5d5b7a8e3d6c8f9e2a1b4c5d');
+    // ===== END DEBUG CODE =====
+    
+    // Your existing login code continues...
+    const result = await SecurityModule.authenticateAdmin(username, password);
+    // ... rest of your code
+});
